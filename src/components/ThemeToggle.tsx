@@ -4,12 +4,16 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Set dark theme as default on mount if not already set
+    if (!resolvedTheme) {
+      setTheme("dark");
+    }
+  }, [resolvedTheme, setTheme]);
 
   if (!mounted) {
     return null;

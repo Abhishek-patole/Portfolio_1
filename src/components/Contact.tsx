@@ -8,19 +8,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "abhishekpatoles13@gmail.com",
+      href: "mailto:abhishekpatoles13@gmail.com"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Nashik, Maharashtra",
       href: "#"
     }
   ];
@@ -41,7 +35,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {contactInfo.map((item, index) => (
               <Card 
                 key={index}
@@ -63,25 +57,27 @@ const Contact = () => {
           {/* CTA Card */}
           <Card className="p-12 text-center bg-gradient-to-br from-card to-card/50 border-2 shadow-strong animate-scale-in">
             <div className="max-w-2xl mx-auto">
-              <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
+              <h3 className="text-3xl font-bold mb-4">Let's Build Something Great</h3>
               <p className="text-muted-foreground mb-8 text-lg">
-                Whether you need a complete product redesign or help with a specific design challenge, 
-                I'm here to help. Let's create something amazing together.
+                Open to exciting opportunities in UI/UX design and full-stack development. 
+                Let's connect and create meaningful digital experiences together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
                   className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8"
+                  onClick={() => window.location.href = 'mailto:abhishekpatoles13@gmail.com'}
                 >
                   <Send className="mr-2 h-5 w-5" />
-                  Send Message
+                  Send Email
                 </Button>
                 <Button 
                   size="lg"
                   variant="outline"
                   className="text-lg px-8 border-2"
+                  onClick={() => window.open('https://linkedin.com/in/abhishek-patole-dev', '_blank')}
                 >
-                  Schedule a Call
+                  Connect on LinkedIn
                 </Button>
               </div>
             </div>

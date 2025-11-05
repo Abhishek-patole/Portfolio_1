@@ -25,21 +25,24 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-block animate-fade-in">
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              Available for new projects
+              Available for new opportunities
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight animate-fade-in-up">
-            <span className="block mb-2">UI/UX Designer</span>
+            <span className="block mb-2">Abhishek Patole</span>
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              & Creative Developer
+              UI/UX-Focused Full-Stack Developer
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up [animation-delay:200ms]">
-            Crafting beautiful, user-centered digital experiences that blend aesthetics with functionality
+            Crafting interfaces that connect design, code, and human experience
+          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up [animation-delay:300ms]">
+            I'm an engineering student passionate about intuitive digital experiences, blending user-centric design with clean, scalable code.
           </p>
 
           {/* CTA Buttons */}
@@ -65,7 +68,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-4 justify-center pt-8 animate-fade-in-up [animation-delay:600ms]">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Abhishek-patole" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-soft hover:shadow-medium"
@@ -73,7 +76,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/abhishek-patole-dev" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-soft hover:shadow-medium"
@@ -81,7 +84,7 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:abhishekpatoles13@gmail.com"
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-soft hover:shadow-medium"
             >
               <Mail className="h-5 w-5" />

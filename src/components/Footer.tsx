@@ -11,10 +11,10 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-                Your Name
+                Abhishek Patole
               </h3>
               <p className="text-secondary-foreground/80">
-                UI/UX Designer & Creative Developer crafting beautiful digital experiences.
+                UI/UX-focused full-stack developer crafting meaningful digital experiences.
               </p>
             </div>
 
@@ -24,17 +24,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                    Home
+                    About
                   </a>
                 </li>
                 <li>
                   <a href="#projects" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
                     Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                    About
                   </a>
                 </li>
                 <li>
@@ -50,7 +45,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-3">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/Abhishek-patole" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-secondary-foreground/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -58,7 +53,7 @@ const Footer = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://linkedin.com/in/abhishek-patole-dev" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-secondary-foreground/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -66,7 +61,7 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:abhishekpatoles13@gmail.com"
                   className="p-2 rounded-lg bg-secondary-foreground/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 >
                   <Mail className="h-5 w-5" />
@@ -78,7 +73,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-secondary-foreground/20 text-center">
             <p className="text-secondary-foreground/80 flex items-center justify-center gap-2">
-              © {currentYear} Made with <Heart className="h-4 w-4 text-accent fill-accent" /> by Your Name
+              © {currentYear} Made with <Heart className="h-4 w-4 text-accent fill-accent" /> by Abhishek Patole
             </p>
           </div>
         </div>

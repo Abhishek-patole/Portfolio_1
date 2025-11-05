@@ -9,25 +9,28 @@ import project3 from "@/assets/project3.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform Redesign",
-      description: "Complete redesign of an online shopping platform focusing on improved user flow and conversion optimization. Increased conversion rate by 45%.",
+      title: "RideOn – AI Bike Pooling Platform",
+      description: "Smart ride-matching UI with intuitive flow for riders & passengers. Contributed to backend architecture and design implementation for seamless user experience.",
       image: project1,
-      tags: ["UI Design", "UX Research", "Prototyping"],
-      color: "from-blue-500 to-purple-500"
+      tags: ["React.js", "Node.js", "MongoDB", "Scikit-Learn", "UI/UX Design"],
+      color: "from-blue-500 to-purple-500",
+      role: "Backend + Design Contributor"
     },
     {
-      title: "Food Delivery Mobile App",
-      description: "Designed a modern, intuitive mobile app for food delivery service with focus on quick ordering and real-time tracking features.",
+      title: "Fullstack Chat App",
+      description: "Minimal responsive chat interface with real-time messaging capabilities. Built complete fullstack solution with focus on clean, intuitive user experience.",
       image: project2,
-      tags: ["Mobile Design", "User Testing", "Figma"],
-      color: "from-pink-500 to-orange-500"
+      tags: ["React.js", "Node.js", "Socket.io", "MongoDB"],
+      color: "from-cyan-500 to-blue-500",
+      role: "Fullstack Developer"
     },
     {
-      title: "SaaS Dashboard Analytics",
-      description: "Created a comprehensive analytics dashboard for a SaaS platform with advanced data visualization and user-friendly interface.",
+      title: "C Mastermind",
+      description: "Gamified learning flow for C programming with interactive challenges. Designed engaging UX flow and built robust backend for seamless learning experience.",
       image: project3,
-      tags: ["Dashboard", "Data Viz", "Design System"],
-      color: "from-cyan-500 to-blue-500"
+      tags: ["Node.js", "EJS", "MongoDB", "UX Design"],
+      color: "from-green-500 to-emerald-500",
+      role: "Backend + UX Contributor"
     }
   ];
 
@@ -68,6 +71,7 @@ const Projects = () => {
                   {/* Content */}
                   <div className="p-8 flex flex-col justify-between">
                     <div>
+                      <Badge variant="secondary" className="mb-4">{project.role}</Badge>
                       <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>

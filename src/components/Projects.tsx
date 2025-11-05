@@ -2,35 +2,47 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
+import c_mastermind from "@/assets/c_mastermind.png"
+import bike_pooling from "@/assets/bike_pooling.png"
+
+import project_chat_app from "@/assets/project_chat_app.png";
+
 
 const Projects = () => {
   const projects = [
-    {
-      title: "RideOn – AI Bike Pooling Platform",
-      description: "Smart ride-matching UI with intuitive flow for riders & passengers. Contributed to backend architecture and design implementation for seamless user experience.",
-      image: project1,
-      tags: ["React.js", "Node.js", "MongoDB", "Scikit-Learn", "UI/UX Design"],
-      color: "from-blue-500 to-purple-500",
-      role: "Backend + Design Contributor"
-    },
+   
     {
       title: "Fullstack Chat App",
       description: "Minimal responsive chat interface with real-time messaging capabilities. Built complete fullstack solution with focus on clean, intuitive user experience.",
-      image: project2,
+      image: project_chat_app,
       tags: ["React.js", "Node.js", "Socket.io", "MongoDB"],
       color: "from-cyan-500 to-blue-500",
-      role: "Fullstack Developer"
+      role: "Fullstack Developer",
+      // CHANGED: Add your URLs here
+      liveUrl: "https://fullstack-chat-app-2owu.onrender.com",
+      githubUrl: "#"
+    },
+     {
+      title: "RideOn – AI Bike Pooling Platform",
+      description: "Smart ride-matching UI with intuitive flow for riders & passengers. Contributed to backend architecture and design implementation for seamless user experience.",
+      image: bike_pooling,
+      tags: ["React.js", "Node.js", "MongoDB", "Scikit-Learn", "UI/UX Design"],
+      color: "from-blue-500 to-purple-500",
+      role: "Backend + Design Contributor",
+      // CHANGED: Add your URLs here
+      liveUrl: "https://bike-pooling-project.vercel.app/", // e.g., "https://rideon.vercel.app"
+      githubUrl: "#" // e.g., "https://github.com/your-username/rideon"
     },
     {
       title: "C Mastermind",
       description: "Gamified learning flow for C programming with interactive challenges. Designed engaging UX flow and built robust backend for seamless learning experience.",
-      image: project3,
+      image: c_mastermind,
       tags: ["Node.js", "EJS", "MongoDB", "UX Design"],
       color: "from-green-500 to-emerald-500",
-      role: "Backend + UX Contributor"
+      role: "Backend + UX Contributor",
+      // CHANGED: Add your URLs here
+      liveUrl: "https://github.com/Abhishek-patole/C-MasterMind",
+      githubUrl: "https://github.com/Abhishek-patole/C-MasterMind"
     }
   ];
 
@@ -95,16 +107,30 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3">
-                      <Button 
-                        variant="default"
-                        className="bg-gradient-primary hover:opacity-90"
+                      {/* CHANGED: Wrapped Button in <a> tag */}
+                      <a 
+                        href={project.liveUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                       >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        View Case Study
-                      </Button>
-                      <Button variant="outline" size="icon">
-                        <Github className="h-4 w-4" />
-                      </Button>
+                        <Button 
+                          variant="default"
+                          className="bg-gradient-primary hover:opacity-90"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          View Case Study
+                        </Button>
+                      </a>
+                      {/* CHANGED: Wrapped Button in <a> tag */}
+                      <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="icon">
+                          <Github className="h-4 w-4" />
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -12,49 +12,67 @@ const AboutNew = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container px-4">
+    <section className="relative py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
+      {/* Decorative background glow */}
+      <div className="absolute inset-0 blur-3xl opacity-30">
+        <div className="bg-gradient-to-r from-blue-400 to-pink-400 w-[350px] h-[350px] rounded-full absolute -top-10 -left-20 animate-pulse" />
+        <div className="bg-gradient-to-r from-emerald-400 to-cyan-400 w-[400px] h-[400px] rounded-full absolute bottom-0 right-0 animate-pulse delay-300" />
+      </div>
+
+      <div className="container px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <Badge variant="outline" className="mb-4">About Me</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-20 animate-fade-in">
+            <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/30">
+              About Me
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Building Meaningful Experiences
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Blending design thinking with development to create digital experiences that truly connect.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* About Section Grid */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Info Card */}
-            <Card className="p-8 border-2 shadow-medium hover:shadow-strong transition-all duration-300 animate-fade-in-up">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 rounded-full bg-gradient-primary">
-                  <GraduationCap className="h-6 w-6 text-primary-foreground" />
+            <Card className="p-10 border border-muted/40 bg-background/70 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 animate-fade-in-up rounded-2xl">
+              <div className="flex items-start gap-5 mb-6">
+                <div className="p-4 rounded-2xl bg-gradient-to-tr from-primary/40 to-accent/30 shadow-inner">
+                  <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Education</h3>
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">Education</h3>
                   <p className="text-muted-foreground">
                     IT Engineering Student at KKWIEER, Nashik
                   </p>
                 </div>
               </div>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I'm passionate about building meaningful, user-first designs with a balance of creativity and logic. 
-                My approach combines technical expertise with design thinking to create interfaces that truly resonate with users.
+                I'm passionate about crafting user-first digital experiences where design meets functionality. My focus lies in building intuitive, scalable solutions that merge creativity and logic seamlessly.
               </p>
             </Card>
 
             {/* Strengths Grid */}
-            <div className="grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+            <div
+              className="grid grid-cols-2 gap-5 animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
               {strengths.map((strength, index) => (
                 <Card
                   key={index}
-                  className="p-6 text-center hover:shadow-medium transition-all duration-300 group cursor-pointer border-2"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="p-6 text-center border border-muted/40 bg-background/60 backdrop-blur-sm rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-all duration-500 group cursor-pointer"
+                  style={{ animationDelay: `${index * 120}ms` }}
                 >
-                  <div className={`mb-4 mx-auto w-14 h-14 rounded-full bg-gradient-to-br ${strength.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`mb-4 mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br ${strength.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg`}
+                  >
                     <strength.icon className="h-6 w-6 text-white" />
                   </div>
-                  <p className="font-semibold text-sm">{strength.label}</p>
+                  <p className="font-semibold text-sm text-foreground">
+                    {strength.label}
+                  </p>
                 </Card>
               ))}
             </div>
